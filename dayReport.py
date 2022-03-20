@@ -20,13 +20,13 @@ def load_params(ss, mode):
     json_form = get_report_data(ss)  # 获取昨日填报信息
 
     params = {
-        "DZ_JSDTCJTW": 36.5,
+        "DZ_JSDTCJTW": 36.4,
         "DZ_DBRQ": "%Y-%m-%d",
         "CZRQ": "%Y-%m-%d %H:%M:%S",
         "CREATED_AT": "%Y-%m-%d %H:%M:%S",
         "NEED_CHECKIN_DATE": "%Y-%m-%d"
     }
-    params["DZ_JSDTCJTW"] = 36 + random.randint(1, 10) / 10
+    params["DZ_JSDTCJTW"] = 36 + random.randint(1, 6) / 10
     if mode != '':
         try:
             local = configs['dailyReport'][mode]
